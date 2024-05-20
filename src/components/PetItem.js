@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PetItem = ({ pet }) => {
   return (
@@ -11,7 +12,7 @@ const PetItem = ({ pet }) => {
       "
       />
       <button className=" border border-black px-5 py-1 rounded-md hover:bg-[black] hover:text-white">
-        View
+        <Link to={`/petDetails/${pet.id}`}>View</Link>
       </button>
     </div>
   );
