@@ -14,7 +14,7 @@ const PetList = () => {
 
   const { data, isLoading } = useQuery({
     queryKey: ["pets"],
-    queryFn: getAllPets,
+    queryFn: () => getAllPets(),
   });
 
   const petList = data
