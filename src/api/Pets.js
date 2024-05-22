@@ -20,9 +20,10 @@ const createOnePet = async (name, type, image, adopted) => {
   return res.data;
 };
 
-// const deleteOnePet = async (id) => {
-//   const res = await instance.delete(`/pets/${id}`);
-//   return res.data;
-// };
+const deletePet = async (petId) => {
+  const res = await instance.delete(`/pets/${petId}`);
 
-export { getAllPets, getOnePet, createOnePet };
+  return res.data;
+};
+
+export { getAllPets, getOnePet, createOnePet, deletePet };
